@@ -41,6 +41,7 @@ rm -rf $BASE_PATH/libmicroros
 mkdir -p $BASE_PATH/libmicroros/include
 cp -R firmware/build/include/* $BASE_PATH/libmicroros/include/ 
 cp -R firmware/build/libmicroros.a $BASE_PATH/libmicroros/libmicroros.a
+cp $BASE_PATH/library_generation/library.json $BASE_PATH/libmicroros/library.json
 
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > $BASE_PATH/libmicroros/available_ros2_types
