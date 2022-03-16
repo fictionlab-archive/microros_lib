@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker pull microros/micro_ros_static_library_builder:foxy
+docker build --pull -t micro_ros_library_builder .
 docker run -it --rm \
     -v $(pwd):/project \
     --env MICROROS_LIBRARY_FOLDER=. \
-    microros/micro_ros_static_library_builder:foxy
+    micro_ros_library_builder

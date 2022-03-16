@@ -1,15 +1,8 @@
-#!/bin/bash
-set -e
+#!/bin/bash -e
 
 export BASE_PATH=/project/$MICROROS_LIBRARY_FOLDER
 
 ######## Init ########
-
-apt update 
-apt install -y gcc-arm-none-eabi
-
-cd /uros_ws
-
 source /opt/ros/$ROS_DISTRO/setup.bash
 source install/local_setup.bash
 
